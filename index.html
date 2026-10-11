@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acessibilitê — Acessibilidade e Tecnologia Assistiva</title>
+  <meta name="description" content="Acessibilitê: orientação e mobilidade, tecnologia assistiva e formação em acessibilidade para pessoas com deficiência visual.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="canonical" href="https://acessibilite.com.br/">
+  <meta property="og:title" content="Acessibilitê — Acessibilidade e Tecnologia Assistiva">
+  <meta property="og:description" content="Orientação e mobilidade, tecnologia assistiva e formação em acessibilidade para pessoas com deficiência visual.">
+  <meta property="og:image" content="https://acessibilite.com.br/img/orientacao-mobilidade.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Aplica preferências salvas antes da renderização para evitar "piscar"
+    try {
+      var p = JSON.parse(localStorage.getItem('a11y') || '{}');
+      if (p.contraste) document.documentElement.classList.add('alto-contraste');
+      if (p.fonte) document.documentElement.style.setProperty('--escala', p.fonte);
+    } catch (e) {}
+  </script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <div class="barra-a11y" role="toolbar" aria-label="Ferramentas de acessibilidade">
+    <div class="container barra-a11y__itens">
+      <button type="button" data-acao="diminuir" aria-label="Diminuir tamanho do texto">A−</button>
+      <button type="button" data-acao="padrao" aria-label="Tamanho de texto padrão">A</button>
+      <button type="button" data-acao="aumentar" aria-label="Aumentar tamanho do texto">A+</button>
+      <button type="button" data-acao="contraste" aria-pressed="false">Alto contraste</button>
+    </div>
+  </div>
+
+  <header class="topo">
+    <div class="container topo__itens">
+      <a class="marca" href="#inicio" aria-label="Acessibilitê — página inicial">
+        <svg class="marca__icone" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <circle cx="24" cy="24" r="22" fill="currentColor"/>
+          <circle cx="24" cy="12" r="3.6" fill="#fff"/>
+          <path d="M13 18.5 24 21l11-2.5M24 21v8m0 0-5 10m5-10 5 10" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        <span>Acessibilitê</span>
+      </a>
+      <nav aria-label="Menu principal">
+        <ul class="menu">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#tecnologias">Tecnologias</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <section id="inicio" class="hero" aria-labelledby="titulo-hero">
+      <div class="container hero__grade">
+        <div>
+          <p class="sobretitulo">Acessibilidade e inclusão</p>
+          <h1 id="titulo-hero">Autonomia para pessoas com deficiência visual</h1>
+          <p class="lead">Orientação e mobilidade, tecnologia assistiva e formação em acessibilidade para pessoas, famílias, escolas e instituições.</p>
+          <div class="acoes">
+            <a class="botao" href="#contato">Fale conosco</a>
+            <a class="botao botao--secundario" href="#servicos">Conheça os serviços</a>
+          </div>
+        </div>
+        <figure class="hero__foto">
+          <picture>
+            <source srcset="img/orientacao-mobilidade.webp" type="image/webp">
+            <img src="img/orientacao-mobilidade.jpg" width="900" height="1196"
+                 alt="Duas pessoas em um pátio de escola ao lado de cones e de um piso tátil azul, durante uma atividade de orientação e mobilidade.">
+          </picture>
+        </figure>
+      </div>
+    </section>
+
+    <section id="servicos" class="secao" aria-labelledby="titulo-servicos">
+      <div class="container">
+        <h2 id="titulo-servicos">Serviços</h2>
+        <ul class="cartoes">
+          <li class="cartao">
+            <svg class="cartao__icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="13" cy="4" r="2"/><path d="M12 7.5 9 10v4l-2 7m5-13.5 2 3 3 1M10 14l3 2 1 5M17 13l3 8"/></svg>
+            <h3>Orientação e Mobilidade</h3>
+            <p>Treino de técnicas de deslocamento com bengala, uso de pisos táteis e reconhecimento de ambientes, para que a pessoa se locomova com segurança e independência.</p>
+          </li>
+          <li class="cartao">
+            <svg class="cartao__icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="11" rx="1.5"/><path d="M2 19h20"/><circle cx="8" cy="10" r=".8"/><circle cx="12" cy="10" r=".8"/><circle cx="16" cy="10" r=".8"/></svg>
+            <h3>Tecnologia Assistiva</h3>
+            <p>Orientação na escolha e no uso de leitores de tela, linhas braille, impressoras braille, ampliadores e outros recursos para estudo e trabalho.</p>
+          </li>
+          <li class="cartao">
+            <svg class="cartao__icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 8l10-5 10 5-10 5z"/><path d="M6 10v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
+            <h3>Formação para Educadores</h3>
+            <p>Capacitação de professores e equipes escolares em práticas inclusivas, Atendimento Educacional Especializado (AEE) e produção de materiais acessíveis.</p>
+          </li>
+          <li class="cartao">
+            <svg class="cartao__icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v.01M8.5 10l3.5 1 3.5-1M12 11v3l-2 3m2-3 2 3"/></svg>
+            <h3>Consultoria em Acessibilidade</h3>
+            <p>Avaliação de espaços, materiais e sites, com recomendações práticas para torná-los acessíveis a todas as pessoas.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="tecnologias" class="secao secao--alternada" aria-labelledby="titulo-tecnologias">
+      <div class="container">
+        <h2 id="titulo-tecnologias">Tecnologias que transformam</h2>
+        <p class="intro">Recursos de tecnologia assistiva que ampliam o acesso à leitura, à escrita e à informação.</p>
+        <dl class="lista-tec">
+          <div><dt>Linha braille</dt><dd>Dispositivo que exibe em braille, de forma dinâmica, o texto da tela do computador ou do celular.</dd></div>
+          <div><dt>Impressora braille</dt><dd>Imprime documentos, livros e materiais didáticos em relevo para leitura tátil.</dd></div>
+          <div><dt>Leitores de tela</dt><dd>Programas como NVDA, JAWS, TalkBack e VoiceOver, que leem em voz alta o conteúdo exibido.</dd></div>
+          <div><dt>Ampliadores</dt><dd>Recursos de ampliação de tela e lupas eletrônicas para pessoas com baixa visão.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="sobre" class="secao" aria-labelledby="titulo-sobre">
+      <div class="container sobre">
+        <picture>
+          <source srcset="img/perfil.webp" type="image/webp">
+          <img class="sobre__foto" src="img/perfil.jpg" width="480" height="473" alt="Retrato da responsável pela Acessibilitê." loading="lazy">
+        </picture>
+        <div>
+          <h2 id="titulo-sobre">Sobre a Acessibilitê</h2>
+          <p>A Acessibilitê nasceu do compromisso com a inclusão de pessoas com deficiência visual. Unimos conhecimento técnico e experiência em educação para promover autonomia, acesso à informação e participação plena na escola, no trabalho e na vida em comunidade.</p>
+          <p>Acreditamos que acessibilidade não é favor: é direito.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="secao secao--destaque" aria-labelledby="titulo-contato">
+      <div class="container">
+        <h2 id="titulo-contato">Contato</h2>
+        <p class="intro">Quer saber mais ou agendar um atendimento? Envie uma mensagem e retornaremos o contato.</p>
+        <ul class="contatos">
+          <li><a class="botao botao--claro" href="mailto:contato@acessibilite.com.br">Enviar e-mail: contato@acessibilite.com.br</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>© <span id="ano">2026</span> Acessibilitê. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
