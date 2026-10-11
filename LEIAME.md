@@ -24,7 +24,7 @@ Para atualizar, repita o upload/deploy.
 
 ## Publicar (GitHub Pages, grátis)
 1. Repositório público `acessibilite-site` → Settings → Pages → Source: branch `main`, pasta `/ (root)`.
-2. O arquivo `CNAME` já aponta para `acessibilite.com.br`.
+2. Depois de configurar o DNS (passo 3), em Settings → Pages → Custom domain, informe `acessibilite.com.br`.
 3. No DNS do Cloudflare:
    - `CNAME` `@` → `<usuario>.github.io` (Cloudflare faz "flattening" no domínio raiz)
    - `CNAME` `www` → `<usuario>.github.io`
